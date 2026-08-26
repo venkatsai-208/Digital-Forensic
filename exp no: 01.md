@@ -74,14 +74,12 @@ Volatile memory and non-volatile disk evidence were acquired using **FTK Imager*
 ## Conclusion
 
 FTK Imager provides a practical method for acquiring and preserving digital forensic evidence. It supports memory acquisition, disk imaging, multiple forensic image formats, and hash verification
-
-<img width="500" height="472" alt=screenshot 2026-08-26 at 1 28 18 PM" src="https://github.com/user-attachments/assets/9d4e5737-b6fb-4fe5-860c-6f20d42b926f" />
-<img width="505" height="390" alt=screenshot 2026-08-26 at 1 28 18 PM (1)" src="https://github.com/user-attachments/assets/221fabcf-45f4-44e2-ac4a-e950b55c4dbc" />
-<img width="1438" height="1093" alt=screenshot 2026-08-26 at 1 28 40 PM" src="https://github.com/user-attachments/assets/ea2d43f8-dc63-4a22-80ef-e0f4797a1cb4" />
-<img width="585" height="428" alt=screenshot 2026-08-26 at 1 28 19 PM" src="https://github.com/user-attachments/assets/bb2b5af7-47d7-4c9e-94be-6c56414f2dd6" />
-<img width="575" height="426" alt=screenshot 2026-08-26 at 1 28 20 PM" src="https://github.com/user-attachments/assets/fe113a41-c9c8-4242-980a-fbf865cfb967" />
-<img width="395" height="347" alt=screenshot 2026-08-26 at 1 28 20 PM (1)" src="https://github.com/user-attachments/assets/1a5dc811-8dba-40b3-9109-eb65ae3ddf94" />
-<img width="465" height="355" alt=screenshot 2026-08-26 at 1 28 21 PM" src="https://github.com/user-attachments/assets/d662a286-72bd-4553-a5a5-004fc6ec6ec2" />
-<img width="1448" height="1086" alt=screenshot 2026-08-26 at 1 28 39 PM" src="https://github.com/user-attachments/assets/1001e1d2-b481-40b4-a1a3-202282f5017c" />
-<img width="470" height="355" alt=screenshot 2026-08-26 at 1 28 22 PM" src="https://github.com/user-attachments/assets/8b22e89e-5920-405b-958e-9d65434e74cd" />
-
+<img width="500" height="472" alt="WhatsApp Image 2026-08-26 at 1 28 18 PM" src="https://github.com/user-attachments/assets/4696c419-3ff9-4b35-99db-05a02e34f470" />
+<img width="505" height="390" alt="WhatsApp Image 2026-08-26 at 1 28 18 PM (1)" src="https://github.com/user-attachments/assets/4ae031f2-fc83-47b1-bbaf-9ad9437f4a4b" />
+<img width="1438" height="1093" alt="WhatsApp Image 2026-08-26 at 1 28 40 PM" src="https://github.com/user-attachments/assets/bf5c83f4-9b52-494a-b32f-cf6a7899cb5c" />
+<img width="585" height="428" alt="WhatsApp Image 2026-08-26 at 1 28 19 PM" src="https://github.com/user-attachments/assets/5116f72f-247d-451f-89b7-0f45cb921d6a" />
+<img width="575" height="426" alt="WhatsApp Image 2026-08-26 at 1 28 20 PM" src="https://github.com/user-attachments/assets/0a09c75e-6972-4c69-9eca-f13fc264a002" />
+<img width="395" height="347" alt="WhatsApp Image 2026-08-26 at 1 28 20 PM (1)" src="https://github.com/user-attachments/assets/3e463f3c-4871-4adf-bff6-5037ac55a85c" />
+<img width="465" height="355" alt="WhatsApp Image 2026-08-26 at 1 28 21 PM" src="https://github.com/user-attachments/assets/d30a277a-ddd4-4b2e-8619-d9c701e63249" />
+<img width="1448" height="1086" alt="WhatsApp Image 2026-08-26 at 1 28 39 PM" src="https://github.com/user-attachments/assets/fa5ea0bc-9f78-483f-83e3-370c734bbf61" />
+<img width="470" height="355" alt="WhatsApp Image 2026-08-26 at 1 28 22 PM" src="https://github.com/user-attachments/assets/8166f302-02cf-4dd8-b26a-fc518b4304ec" />
