@@ -49,7 +49,7 @@ Open an authorized test website and submit the test login credentials.
 
 Return to Wireshark after submitting the test credentials and analyze the captured packets. :contentReference[oaicite:1]{index=1}
 
-<img width="1600" height="800" alt=screenshot 2026-08-26 at 4 08 59 PM" src="https://github.com/user-attachments/assets/ab87860b-7b49-471e-860b-45f709fd61d3" />
-<img width="1600" height="843" alt=screenshot 2026-08-26 at 3 55 32 PM" src="https://github.com/user-attachments/assets/3d522464-edf3-4a41-bd49-796fe35daf82" />
-<img width="1600" height="849" alt=screenshot 2026-08-26 at 3 55 31 PM" src="https://github.com/user-attachments/assets/e50a8317-fee2-4048-bbc2-0bc2666cd143" />
-<img width="1536" height="1024" alt=screenshot 2026-08-26 at 4 08 59 PM (1)" src="https://github.com/user-attachments/assets/6fd29f36-702a-4fb6-9c34-504412c46c5c" />
+<img width="1600" height="800" alt=screenshot 2026-08-26 at 4 08 59 PM" src="https://github.com/user-attachments/assets/e682a391-3870-4afa-a951-d49b9b66f0c3" />
+<img width="1600" height="843" alt=screenshot 2026-08-26 at 3 55 32 PM" src="https://github.com/user-attachments/assets/30c1e8aa-813a-4716-86be-3795fa528823" />
+<img width="1600" height="849" alt=screenshot 2026-08-26 at 3 55 31 PM" src="https://github.com/user-attachments/assets/eb3ac278-5cb4-4f42-871e-a005467eb45f" />
+<img width="1536" height="1024" alt=screenshot 2026-08-26 at 4 08 59 PM (1)" src="https://github.com/user-attachments/assets/12ba739e-57d8-4269-9c5f-1b6755790cdb" />
