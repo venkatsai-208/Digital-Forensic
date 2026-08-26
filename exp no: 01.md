@@ -73,22 +73,8 @@ Volatile memory and non-volatile disk evidence were acquired using **FTK Imager*
 
 ## Conclusion
 
-FTK Imager provides a practical method for acquiring and preserving digital forensic evidence. It supports memory acquisition, disk imaging, multiple forensic image formats, and hash verification.
+FTK Imager provides a practical method for acquiring and preserving digital forensic evidence. It supports memory acquisition, disk imaging, multiple forensic image formats, and hash verification
 
-## Repository Structure
-
-```text
-Ex.No.1-FTK-Imager/
-│
-├── README.md
-├── screenshots/
-│   ├── capture-memory.png
-│   ├── create-disk-image.png
-│   ├── image-destination.png
-│   └── hash-verification.png
-│
-└── report/
-    └── Ex.No.1-FTK-Imager.pdf
 <img width="500" height="472" alt=screenshot 2026-08-26 at 1 28 18 PM" src="https://github.com/user-attachments/assets/9d4e5737-b6fb-4fe5-860c-6f20d42b926f" />
 <img width="505" height="390" alt=screenshot 2026-08-26 at 1 28 18 PM (1)" src="https://github.com/user-attachments/assets/221fabcf-45f4-44e2-ac4a-e950b55c4dbc" />
 <img width="1438" height="1093" alt=screenshot 2026-08-26 at 1 28 40 PM" src="https://github.com/user-attachments/assets/ea2d43f8-dc63-4a22-80ef-e0f4797a1cb4" />
