@@ -49,12 +49,6 @@ Open an authorized test website and submit the test login credentials.
 
 Return to Wireshark after submitting the test credentials and analyze the captured packets. :contentReference[oaicite:1]{index=1}
 
-### Step 4: Filter HTTP Traffic
-
-Use the following display filter:
-
-```text
-http
 <img width="1600" height="800" alt=screenshot 2026-08-26 at 4 08 59 PM" src="https://github.com/user-attachments/assets/721f0b78-7296-4e79-be23-1b118a493092" />
 <img width="1600" height="843" alt=screenshot 2026-08-26 at 3 55 32 PM" src="https://github.com/user-attachments/assets/76a9de30-e497-44e5-b641-e11e4137592c" />
 <img width="1600" height="849" alt=screenshot 2026-08-26 at 3 55 31 PM" src="https://github.com/user-attachments/assets/7ad28e94-2638-43ea-9df5-752ba46e6f20" />
