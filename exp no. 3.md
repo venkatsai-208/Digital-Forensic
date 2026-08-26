@@ -49,7 +49,13 @@ Open an authorized test website and submit the test login credentials.
 
 Return to Wireshark after submitting the test credentials and analyze the captured packets. :contentReference[oaicite:1]{index=1}
 
-<img width="1600" height="800" alt=screenshot 2026-08-26 at 4 08 59 PM" src="https://github.com/user-attachments/assets/e682a391-3870-4afa-a951-d49b9b66f0c3" />
-<img width="1600" height="843" alt=screenshot 2026-08-26 at 3 55 32 PM" src="https://github.com/user-attachments/assets/30c1e8aa-813a-4716-86be-3795fa528823" />
-<img width="1600" height="849" alt=screenshot 2026-08-26 at 3 55 31 PM" src="https://github.com/user-attachments/assets/eb3ac278-5cb4-4f42-871e-a005467eb45f" />
-<img width="1536" height="1024" alt=screenshot 2026-08-26 at 4 08 59 PM (1)" src="https://github.com/user-attachments/assets/12ba739e-57d8-4269-9c5f-1b6755790cdb" />
+### Step 4: Filter HTTP Traffic
+
+Use the following display filter:
+
+```text
+http
+<img width="1600" height="800" alt="WhatsApp Image 2026-08-26 at 4 08 59 PM" src="https://github.com/user-attachments/assets/b9c6e96a-fb43-4ff9-9598-9d78dca0b9f9" />
+<img width="1600" height="843" alt="WhatsApp Image 2026-08-26 at 3 55 32 PM" src="https://github.com/user-attachments/assets/954cf2e6-8c75-405f-a088-9d0fc8ae579b" />
+<img width="1600" height="849" alt="WhatsApp Image 2026-08-26 at 3 55 31 PM" src="https://github.com/user-attachments/assets/4224bbda-02ea-43ca-9f38-9fa4f4333538" />
+<img width="1536" height="1024" alt="WhatsApp Image 2026-08-26 at 4 08 59 PM (1)" src="https://github.com/user-attachments/assets/89528926-4ec7-4abb-8c0e-2879a97725c4" />
