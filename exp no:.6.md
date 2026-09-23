@@ -77,8 +77,7 @@ The experiment manual specifies timeline analysis as an optional step. A body fi
 
 The Sleuth Kit Windows package contains mactime.pl rather than mactime.exe. Perl was not available in the Windows environment, so the optional mactime timeline generation was not executed.
 
-<img width="1600" height="812" alt="screenshot"<img width="1376" height="1143" alt="WhatsApp Image 2026-09-23 at 10 51 29 PM" src="https://github.com/user-attachments/assets/d8bd20a9-109e-4857-a77b-aec33bb78c87" />
- src="https://github.com/user-attachments/assets/6c1b1d77-8ba0-46c3-8957-dfb2349c6e8c" />
+<img width="1453" height="735" alt="Screenshot 2026-09-23 232838" src="https://github.com/user-attachments/assets/7f99e64b-9ffd-4cb7-812d-44bd5d3f6eb6" />
 
 
 ## Step 9: Generate and Collect the Report Data
