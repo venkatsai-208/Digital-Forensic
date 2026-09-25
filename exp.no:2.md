@@ -1,308 +1,199 @@
-# Experiment No. 10 — Malware Analysis Using Ghidra
+# Experiment No. 2: Recover Deleted or Damaged Files Using TestDisk
 
 ## Aim
 
-To use Ghidra to disassemble and analyze an executable file and identify its functions, strings, API calls, cross-references, control flow, file operations, and behavioral indicators.
+To recover a deleted or missing partition and restore access to the files using TestDisk.
 
-## Tools Used
+## Software Used
 
-- Ghidra
-- Java JDK 21+
-- GCC / MinGW
-- Windows
-- Command Prompt
+- TestDisk 7.3-WIP
+- Windows Operating System
+- USB Pendrive
+- NTFS File System
 
-## Safety Note
+## Introduction
 
-A self-created benign executable was used for this experiment instead of real malware. The sample does not contain malicious functionality and was created only for demonstrating static analysis using Ghidra.
+TestDisk is a free and open-source data recovery utility used to recover lost partitions, repair damaged partition structures, and restore access to files from storage devices.
 
----
+In this experiment, a 4 GB partition named `Testing` was created on a USB pendrive. The partition was deleted to simulate data loss. TestDisk was then used to analyse the USB pendrive, locate the deleted partition, verify the files stored in it, and restore the partition structure.
 
-# Step 2 — Create the Sample Directory
+## Procedure
 
-Open Command Prompt and run:
+### Step 1: Open TestDisk
 
-    mkdir C:\Users\moham\Ghidra_Sample
-    cd C:\Users\moham\Ghidra_Sample
+Open `testdisk_win.exe` with administrator privileges.
 
----
-
-# Step 3 — Create the C Source File
-
-Create a file named:
-
-    malware_lab.c
-<img width="1332" height="1181" alt="screenshot" src="https://github.com/user-attachments/assets/99311680-3eb2-449f-9574-354b46eb3ccb" />
-
-
-# Step 4 — Verify GCC
-
-Run:
-
-    gcc --version
-
-GCC should display its installed version.
-
-Example:
-
-    gcc (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r8) 13.2.0
-
----
-
-# Step 5 — Compile the Program
-
-Run:
-
-    gcc malware_lab.c -o malware_lab.exe
-
-Then verify the generated files:
-
-    dir
-
-Expected files:
-
-    malware_lab.c
-    malware_lab.exe
-
----
-
-# Step 6 — Verify the Sample
-
-The executable is a benign laboratory sample.
-
-The program contains:
-
-    main()
-    file_operation()
-    suspicious_function()
-
-The program creates:
-
-    analysis_test.txt
-
-The file contains:
-
-    Ghidra malware analysis laboratory
-
----
-
-# Step 7 — Open Ghidra
-
-Launch Ghidra.
+TestDisk displays information about the data recovery utility and provides options for creating or appending a log file.
 
 Select:
 
-    File → New Project
+`Create`
 
-Choose:
-
-    Non-Shared Project
-
-Project location:
-
-    C:\Users\moham\Ex9_Ghidra_Malware_Analysis
-<img width="1457" height="1079" alt="screenshot" src="https://github.com/user-attachments/assets/c511eebd-02c3-4a59-90ab-25bc6ce7ec06" />
+and press **Enter** to create a new log file.
+<img width="1048" height="712" alt="Screenshot 2026-09-24 134839" src="https://github.com/user-attachments/assets/b435ba83-5df9-49d0-96f8-50621b9c080c" />
 
 
-# Step 8 — Import the Executable
 
-In Ghidra select:
 
-    File → Import File
+**Observation:** TestDisk was successfully started and the option to create a new log file was selected.
+
+---
+
+### Step 2: Select the USB Pendrive
+
+TestDisk displays all detected physical storage devices.
+
+The USB pendrive was identified as:
+
+- PhysicalDrive1
+- 125 GB / 117 GiB
+- USB DISK 2.0
+
+Select the USB pendrive and choose:
+
+`Proceed`
+<img width="1098" height="697" alt="Screenshot 2026-09-24 134921" src="https://github.com/user-attachments/assets/47bd9345-371a-48b8-9f7b-757f36f051e8" />
+
+
+
+
+**Observation:** The 117 GB USB pendrive was correctly identified and selected for the recovery process.
+
+---
+
+### Step 3: Analyse the Disk
+
+After selecting the USB pendrive, TestDisk displays the main menu.
+
+The available options include:
+
+- Analyse
+- Advanced
+- Geometry
+- Options
+- MBR Code
+- Delete
+- Quit
 
 Select:
 
-    C:\Users\moham\Ghidra_Sample\malware_lab.exe
+`Analyse`
 
-Click Import.
+to analyse the current partition structure and search for lost partitions.
 
-Open the imported program in CodeBrowser.
-
-When Ghidra asks whether to perform analysis:
-
-    Select Yes
-<img width="1917" height="1022" alt="Screenshot 2026-09-23 083051" src="https://github.com/user-attachments/assets/2a47954f-f10e-4037-8532-d5a031641486" />
+<img width="1088" height="671" alt="Screenshot 2026-09-24 135004" src="https://github.com/user-attachments/assets/7355fcff-9a42-4f7d-9643-bf2d03155f8f" />
 
 
-# Step 9 — Analyze main()
-
-Open:
-
-    Symbol Tree → Functions → main
-<img width="1917" height="1020" alt="Screenshot 2026-09-23 083245" src="https://github.com/user-attachments/assets/f3150da1-428f-4621-a8f4-8abefecbf5da" />
-
-Double-click main.
-
-
-### Observation
-
-The main() function controls the execution of the program and calls the other functions.
+**Observation:** The Analyse option was selected to search for the deleted partition.
 
 ---
 
-# Step 10 — Analyze file_operation()
+### Step 4: Perform Quick Search
 
-Open:
+TestDisk displays the current partition structure of the USB pendrive.
 
-    Symbol Tree → Functions → file_operation
+The existing `SARATH'S` partition is displayed.
 
-Double-click file_operation.
+Select:
 
+`Quick Search`
 
-The function opens analysis_test.txt in write mode, writes data to it, and closes the file.
+and press **Enter**.
 
-### Observation
-
-The file_operation() function performs a simple file creation and write operation.
-
----
-
-# Step 11 — String Analysis
-
-Open:
-
-    Window → Defined Strings
-
-
-The reference should lead to the code where the string is used.
+<img width="1142" height="745" alt="Screenshot 2026-09-24 135019" src="https://github.com/user-attachments/assets/66c308a3-fdbb-464d-ac0b-a21ab3c67da5" />
 
 
 
-# Step 13 — Analyze Imports / APIs
 
-Open:
-
-    Symbol Tree → Imports
-
-Look for functions such as:
-
-    fopen()
-    fprintf()
-    fclose()
-    printf()
-
-### Observation
-
-API analysis helped identify the file and console operations performed by the executable.
+**Observation:** TestDisk started searching for lost or deleted partitions.
 
 ---
 
-# Step 14 — Cross-Reference Analysis
+### Step 5: Verify the Deleted Partition
 
-Open:
+TestDisk detects the deleted `Testing` partition.
 
-    main()
+Select the `Testing` partition and press:
 
-### Observation
+`P`
 
-Cross-reference analysis was used to understand the relationships between functions.
+The `P` option is used to list the files stored in the selected partition.
 
----
+<img width="1068" height="660" alt="Screenshot 2026-09-24 134937" src="https://github.com/user-attachments/assets/775878db-525a-47f7-9fb7-69528eae280a" />
 
-# Step 15 — Function Graph Analysis
 
-Open:
 
-    Window → Function Graph
 
-The Function Graph displays the control flow of the selected function.
+**Observation:** TestDisk successfully displayed the files from the deleted `Testing` partition. The displayed files included images and screenshots that were previously stored in the partition.
 
-It shows:
+Examples of detected files include:
 
-- Function entry
-- Instructions
-- Conditional branches
-- Function calls
-- Return paths
+- `1.jpg`
+- `2345.jpg`
+- `Screenshot 2026-09-07 203856.png`
+- `WIN_20250914_21_21_06_Pro.jpg`
+- `WIN_20251207_20_53_37_Pro.jpg`
+- `WIN_20251208_13_29_03_Pro.jpg`
 
-### Observation
+This confirms that the deleted partition and its file system data were successfully detected.
 
-The Function Graph provided a visual representation of the program's control flow.
+Press `q` to return to the partition list.
 
 ---
 
-# Step 16 — Analyze suspicious_function()
+### Step 6: Confirm the Recovered Partition
 
-Go to:
+After returning to the partition list, TestDisk displays both the deleted `Testing` partition and the existing `SARATH'S` partition.
 
-    Symbol Tree → Functions → suspicious_function
+The detected partition structure is:
 
-# Step 17 — Behavioral Analysis
+- `Testing` – approximately 4 GB
+- `SARATH'S` – approximately 113 GB
 
-## File Activity
+The screen displays:
 
-The program uses:
+`Structure: Ok.`
 
-    fopen()
-    fprintf()
-    fclose()
-
-and creates/writes:
-
-    analysis_test.txt
-
-<img width="826" height="916" alt="Screenshot 2026-09-23 085957" src="https://github.com/user-attachments/assets/814a6fcb-72fa-4a6b-bd80-d812516ba397" />
-<img width="1251" height="938" alt="Screenshot 2026-09-23 085809" src="https://github.com/user-attachments/assets/b76e9419-c7ef-4ec3-8486-447355fddc4d" />
-<img width="1917" height="440" alt="Screenshot 2026-09-23 085152" src="https://github.com/user-attachments/assets/07a462dc-a7d4-4052-85a9-320c835fb150" />
-<img width="1917" height="1017" alt="Screenshot 2026-09-23 084808" src="https://github.com/user-attachments/assets/594dc935-ae89-4185-a3b1-39fa1c531ad7" />
-<img width="1915" height="1000" alt="Screenshot 2026-09-23 084210" src="https://github.com/user-attachments/assets/396f609d-7149-46a4-92e2-62cd06949ac4" />
+<img width="1142" height="745" alt="Screenshot 2026-09-24 135019" src="https://github.com/user-attachments/assets/cc9f06b9-8c0f-4d25-a0ff-2f6c647f34e6" />
 
 
-# Step 18 — Display File Content
+**Observation:** The deleted `Testing` partition was successfully detected and the partition structure was reported as OK.
 
-The program creates:
-
-    analysis_test.txt
-
-Display its contents:
-
-    cd C:\Users\moham\Ghidra_Sample
-    type analysis_test.txt
-
-Expected output:
-
-    Ghidra malware analysis laboratory
+Press **Enter** to continue.
 
 ---
 
-# Step 19 — Calculate File Hashes
+### Step 7: Write the Recovered Partition Structure
 
-Hashing provides a unique fingerprint for a file.
+TestDisk provides the:
 
-## MD5
+`Write`
 
-    certutil -hashfile malware_lab.exe MD5
+option to save the detected partition structure to the USB pendrive.
 
-## SHA-1
-
-    certutil -hashfile malware_lab.exe SHA1
-
-## SHA-256
-
-    certutil -hashfile malware_lab.exe SHA256
+<img width="1066" height="702" alt="Screenshot 2026-09-24 134950" src="https://github.com/user-attachments/assets/45cae9c9-6998-4ca5-b3c0-386db46a67c2" />
 
 
-# Step 21 — Hash Results
 
-<img width="837" height="105" alt="Screenshot 2026-09-24 111809" src="https://github.com/user-attachments/assets/9d58ca40-c38b-4677-a1e0-a93b022f2baf" />
-<img width="807" height="85" alt="Screenshot 2026-09-24 111739" src="https://github.com/user-attachments/assets/84367e7f-ce44-413f-82f9-8742a22e92ef" />
 
-# Step 24 — Result
+Select:
 
-The executable was successfully imported into Ghidra and analyzed using static-analysis techniques.
+`Write`
 
-The following Ghidra features were used:
+and press **Enter**.
 
-- CodeBrowser
-- Disassembly
-- Decompiler
-- Symbol Tree
-- Functions
-- Defined Strings
-- Imports
-- Cross-References
-- Function Graph
+Confirm the operation when TestDisk asks for confirmation.
 
-The executable's functions, strings, APIs, file operations, and control flow were identified and analyzed.
+**Observation:** The recovered partition structure was selected to be written back to the USB pendrive.
 
-The file hashes were calculated to provide unique identifiers for the analyzed files.
+---
+
+## Result
+
+The deleted 4 GB `Testing` partition was successfully detected using TestDisk. The files stored in the deleted partition were successfully displayed using the `P` option, confirming that the partition data was recoverable.
+
+The recovered partition structure was then selected using the `Write` option.
+
+## Conclusion
+
+The experiment successfully demonstrated the recovery of a deleted partition using TestDisk. The USB pendrive was analysed, the deleted `Testing` partition was located using Quick Search, the files were verified using the `P` option, and the recovered partition structure was selected for writing back to the storage device.
